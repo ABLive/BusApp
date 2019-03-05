@@ -1,0 +1,46 @@
+insert into bus(busid, busno, buslocation_stopid) values (101, 4177, 901);
+
+insert into bus(busid, busno, buslocation_stopid) values (102, 4171, 901);
+
+insert into bus(busid, busno, buslocation_stopid) values (103, 4172, 905);
+
+insert into bus(busid, busno, buslocation_stopid) values (104, 4175, 905);
+
+
+
+insert into conductor(conductorid, conductorfirstname, conductorlastname, conductorphone, conductorlocation_stopid) values (201, 'Vijay', 'LastName', 9999999999, 901);
+
+insert into conductor(conductorid, conductorfirstname, conductorlastname, conductorphone, conductorlocation_stopid) values (202, 'Rajesh', 'LastName', 9999999988, 901);
+
+insert into conductor(conductorid, conductorfirstname, conductorlastname, conductorphone, conductorlocation_stopid) values (203, 'Nilesh', 'LastName', 9999999977, 905);
+
+insert into conductor(conductorid, conductorfirstname, conductorlastname, conductorphone, conductorlocation_stopid) values (204, 'Suresh', 'LastName', 9999999966, 905);
+
+
+insert into driver(driverid, driverfirstname, driverlastname, driverphone, driverlocation_stopid) values (301, 'Ravi', 'LastName', 8888888888, 901);
+
+insert into driver(driverid, driverfirstname, driverlastname, driverphone, driverlocation_stopid) values (302, 'Bhima', 'LastName', 8888888899, 901);
+
+insert into driver(driverid, driverfirstname, driverlastname, driverphone, driverlocation_stopid) values (303, 'Shyam', 'LastName', 8888888877, 905);
+
+insert into driver(driverid, driverfirstname, driverlastname, driverphone, driverlocation_stopid) values (304, 'Sanjay', 'LastName', 8888888866, 905);
+
+
+insert into route(routeid, destination_stopid, source_stopid, via_stopid) values (401, 905, 901, 903);
+
+insert into route(routeid, destination_stopid, source_stopid, via_stopid) values (402, 905, 901, 902);
+
+insert into route(routeid, destination_stopid, source_stopid, via_stopid) values (403, 901, 905, 904);
+
+insert into route(routeid, destination_stopid, source_stopid, via_stopid) values (404, 901, 905, 902);
+
+
+insert into stop(stopid, stoplocation, stopname) values (901, 'Kolhapur', 'Kolhapur CBS');
+
+insert into stop(stopid, stoplocation, stopname) values (902, 'Kolhapur', 'Shiroli');
+
+insert into stop(stopid, stoplocation, stopname) values (903, 'Panhala', 'Waghbil');
+
+insert into stop(stopid, stoplocation, stopname) values (904, 'Panhala', 'Kodoli');
+
+insert into stop(stopid, stoplocation, stopname) values (905, 'WaranaNagar', 'TKIET');

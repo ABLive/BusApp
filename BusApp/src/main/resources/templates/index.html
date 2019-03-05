@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="busApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/styles.css">
+		<title>Smart Bus Schedule</title>
+		<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/angular/angular.min.js"></script>
+		<script	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+		<script src="../js/angular/app.js"></script>
+		<script src="../js/angular/controller.js"></script>
+		<script src="../js/angular/controllers/BusController.js"></script>
+		<script src="../js/angular/controllers/ConductorController.js"></script>
+		<script src="../js/angular/controllers/DriverController.js"></script>
+		<script src="../js/angular/controllers/AddNewBusController.js"></script>
+		<script src="../js/angular/service.js"></script>
+		<script src="../js/angular/services/BusService.js"></script>
+		<script src="../js/angular/services/ConductorService.js"></script>
+		<script src="../js/angular/services/DriverService.js"></script>
+		<script src="../js/angular/services/AddNewBusService.js"></script>
+	</head>
+
+	<body class="custom">
+		<!-- This is for navigation bar at the top -->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="home">Smart Bus Schedule</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="home">Home</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a ui-sref="buses">Bus List</a></li>
+							<li><a ui-sref="conductors">Conductors List</a></li>
+							<li><a ui-sref="drivers">Drivers List</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Add New <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a ui-sref="addNewBus">Add New Bus</a></li>
+							<li><a ui-sref="addNewConductor">Add New Conductor</a></li>
+							<li><a ui-sref="addNewDriver">Add New Driver</a></li>
+							<li><a ui-sref="addNewRoute">Add New Routes</a></li>
+							<li><a ui-sref="addNewSchedule">Add New Schedule</a></li>
+						</ul>
+					</li>
+					<li><a ui-sref="routes">Routes</a></li>
+					<li><a ui-sref="schedule">Schedule</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a ui-sref="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Navigation bar ends here -->
+		
+		<!-- This could possible be ui-view -->
+		<!-- AngularJS will put all the views here -->
+		<div class="container">
+			<ui-view></ui-view>
+		</div>
+
+		<!-- Footer code -->
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="text-center text-muted">Copyright &copy; AABA BABA Corp. Ltd. 2019</div>
+		</nav>
+		<!-- Footer ends here -->
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">CONDUCTORS LIST</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in conductorInfo">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Conductor Id: </strong><br />
+						{{info.conductorid}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Conductor Name: </strong><br/>{{info.conductorfirstname}}, {{info.conductorlastname}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Contact Number: </strong><br/>{{info.conductorphone}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Current Location: </strong><br/>Stop Id: {{info.conductorlocation.stopid}}<br/>{{info.conductorlocation.stopname}}, {{info.conductorlocation.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-1"></div>
+			</div>
+		</li>
+	</ul>
+	<br />
+</div>

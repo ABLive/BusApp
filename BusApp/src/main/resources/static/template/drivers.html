@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">DRIVERS LIST</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in driverInfo">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Driver Id: </strong><br />
+						{{info.driverid}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Driver Name: </strong><br/>{{info.driverfirstname}}, {{info.driverlastname}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Contact Number: </strong><br/>{{info.driverphone}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Current Location: </strong><br/>Stop Id: {{info.driverlocation.stopid}}<br/>{{info.driverlocation.stopname}}, {{info.driverlocation.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-1"></div>
+			</div>
+		</li>
+	</ul>
+	<br />
+</div>
