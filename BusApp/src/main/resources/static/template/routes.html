@@ -1,4 +1,39 @@
-<div>
-	<h1>Routes Page</h1>
-	<img src="../images/bus1.jpg" />
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">ROUTES LIST</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in routeInfo">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Route Id: </strong><br />
+						{{info.routeid}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Source: </strong><br/>{{info.source.stopid}}, {{info.source.stopname}}, {{info.source.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Destination: </strong><br/>{{info.destination.stopid}}, {{info.destination.stopname}}, {{info.destination.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Via: </strong><br/>{{info.via.stopid}}, {{info.via.stopname}}, {{info.via.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-1"></div>
+			</div>
+		</li>
+	</ul>
+	<br />
 </div>

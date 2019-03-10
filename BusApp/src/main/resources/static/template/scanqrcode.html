@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">CURRENT ACTIVE SCHEDULES</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in getStatus">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="well">
+						<strong>Schedule Id: </strong><br />
+						{{info.scheduleid}}
+					</div>
+				</div>
+
+				<div class="col-md-2">
+					<div class="well"><strong>Route Id: </strong><br/>{{info.routeid.routeid}}</div>
+				</div>
+
+				<div class="col-md-2">
+					<div class="well"><strong>Day: </strong><br/>{{info.scheduleday}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Departure: </strong><br/>{{info.departuretime | date:'MM/dd/yyyy @ h:mma'}} <br/ >
+						<strong>Arrival: </strong><br/>{{info.arrivaltime | date:'MM/dd/yyyy @ h:mma'}}
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="btn btn-primary" ng-click="openlivestatus(info.routeid.routeid)">
+						Live Status
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<br />
+</div>

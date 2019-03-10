@@ -30,12 +30,14 @@ busApp.config(function($stateProvider, $urlRouterProvider) {
 	
 	.state('routes', {
 		url: '/routes',
-		templateUrl: '../template/routes.html'
+		templateUrl: '../template/routes.html',
+		controller: 'RouteController'
 	})
 	
 	.state('schedule', {
 		url: '/schedule',
-		templateUrl: '../template/schedule.html'
+		templateUrl: '../template/schedule.html',
+		controller: 'ScheduleController'
 	})
 	
 	.state('addNewBus', {
@@ -66,6 +68,18 @@ busApp.config(function($stateProvider, $urlRouterProvider) {
 		url: '/addNewSchedule',
 		templateUrl: '../template/addNewSchedule.html',
 		controller: ''
+	})
+	
+	.state('scanqrcode', {
+		url: '/scanqrcode',
+		templateUrl: '../template/scanqrcode.html',
+		controller: 'ScanQRCodeController'
+	})
+	
+	.state('livestatus', {
+		url: '/livestatus',
+		templateUrl: '../template/livestatus.html',
+		controller: 'LiveStatusController'
 	});
 	
 });

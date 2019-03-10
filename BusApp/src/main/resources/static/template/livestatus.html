@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">LIVE STATUS FOR ROUTE : {{currentRoute}}</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in getStatus">
+			<div class="row">
+				
+				<div class="col-md-2"></div>
+				<div class="col-md-2">
+					<div class="well">
+						<strong>Sr. No. </strong><br />
+						{{$index + 1}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Stop Id: </strong>{{info.routeStopId.stopid.stopid}} <br />
+						<strong>Stop Name: </strong>{{info.routeStopId.stopid.stopname}}, {{info.routeStopId.stopid.stoplocation}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well">
+						<div class="btn btn-primary">
+							Update This Location
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</li>
+	</ul>
+	<br />
+</div>

@@ -3,6 +3,8 @@ package com.bus.app.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +28,9 @@ public class ConductorController {
 	} 
 	
 	@RequestMapping(value = "/conductorInfo/getAllConductors", method = { RequestMethod.GET, RequestMethod.POST })
-	public List<Conductor> getInformationForAllConductors() {
+	public List<Conductor> getInformationForAllConductors(HttpServletRequest request) {
 		
+		System.out.println("Parameter :---------------" + request.getParameter("test"));
 		return conductorService.getInformationForAllConductors();
 	}
 	

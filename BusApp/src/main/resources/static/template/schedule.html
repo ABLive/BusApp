@@ -1,3 +1,39 @@
-<div>
-	Schedule Page
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="jumbotron">
+				<h1 class="text-center">SCHEDULES LIST</h1>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<ul style="list-style-type: none;">
+		<li ng-repeat="info in scheduleInfo">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="well">
+						<strong>Schedule Id: </strong><br />
+						{{info.scheduleid}}
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Route: </strong><br/>Route Id: {{info.routeid.routeid}} <br/ >From - {{info.routeid.source.stopname}}, {{info.routeid.source.stoplocation}} <br/ >To - {{info.routeid.destination.stopname}}, {{info.routeid.destination.stoplocation}} <br/ >Via - {{info.routeid.via.stopname}}, {{info.routeid.via.stoplocation}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Scheduled Departure: </strong><br/>{{info.scheduleday}}, {{info.departuretime | date:'MM/dd/yyyy @ h:mma'}}</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="well"><strong>Arrival: </strong><br/>{{info.scheduleday}}, {{info.arrivaltime | date:'MM/dd/yyyy @ h:mma'}}</div>
+				</div>
+
+				<div class="col-md-1"></div>
+			</div>
+		</li>
+	</ul>
+	<br />
 </div>

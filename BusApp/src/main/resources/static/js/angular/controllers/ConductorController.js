@@ -2,7 +2,7 @@
 
 busApp.controller('ConductorController', function ConductorController($scope, conductorService, $log) {
 	
-	conductorService.getAllConductors()
+	conductorService.getAllConductors('test')
 		.then(function mySuccess(response) {
 			$scope.conductorInfo = response.data;
 		}, function myError(response) {

@@ -1,0 +1,5 @@
+select * from schedule where routeid_routeid in (select routeid from routestop where stopid = 909);
+
+select stopid,sequence from routestop where routeid in (select routeid_routeid from schedule where routeid_routeid in (select routeid from routestop where stopid = 909));
+
+select stopid,sequence from routestop where routeid in (select routeid_routeid from schedule where routeid_routeid in (select routeid from routestop where stopid = 909))
